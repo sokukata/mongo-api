@@ -1,0 +1,23 @@
+services:
+  mongo-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: -serv=mongodb://mongodb:27017
+    restart: always
+    volumes:
+      - type: bind
+        source: ./outputtest
+        target: /output
+    container_name: mongo-api
+    ports:
+    - 8080:8080
+  mongodb:
+    image: mongo:5.0.6
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=soku
+      - MONGO_INITDB_ROOT_PASSWORD=mypwd
+    restart: always
