@@ -30,7 +30,7 @@ func handleRequests() {
 	// Delete
 	myRouter.HandleFunc("/delete/user/{id}", mongoclient.AuthenticateMiddleware(mongoclient.DeleteUser)).Methods(http.MethodDelete)
 
-	log.Fatal(http.ListenAndServe(":10000", myRouter))
+	log.Fatal(http.ListenAndServe(":8080", myRouter))
 }
 
 func main() {
