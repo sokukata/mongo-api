@@ -2,6 +2,9 @@
 
 ## TL;DR
 ```bash
+$ git clone https://github.com/sokukata/mongo-api.git
+$ cd mongo-api
+
 $ docker-compose build
 $ docker compose up
 
