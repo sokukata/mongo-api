@@ -43,6 +43,6 @@ If you want to build and run go directly without docker:
 ```bash
 $ go mod download
 $ go build
-./mongo-api [--serv=<Yourserv>] [--db=<yourDatabase>] [--coll=<yourCollection>]
+$ ./mongo-api [--serv=<Yourserv>] [--db=<yourDatabase>] [--coll=<yourCollection>]
 
 ```
