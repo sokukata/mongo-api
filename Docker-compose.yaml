@@ -7,7 +7,7 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: ./outputtest
+        source: ./output
         target: /output
     container_name: mongo-api
     ports:
